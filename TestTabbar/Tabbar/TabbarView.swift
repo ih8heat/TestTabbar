@@ -25,8 +25,8 @@ struct TabbarView: View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
                 TabView(selection: $selectedTab) {
-                    TabbarRouter.destinationPage1($selectedTab, text: event)
-                    TabbarRouter.destinationPage2($selectedTab, text: event)
+                    TabbarRouter.destinationPage1($selectedTab, event: event)
+                    TabbarRouter.destinationPage2($selectedTab, event: event)
                 }
                 .onAppear {
                     print(event)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE79AF3A2A667CE800C63AB9 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79AF392A667CE800C63AB9 /* Pages.swift */; };
+		FE79AF3C2A6696AE00C63AB9 /* TabbarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79AF3B2A6696AE00C63AB9 /* TabbarConfigurator.swift */; };
 		FED4CBD42A62D93800EC0B0F /* TabbarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED4CBD32A62D93800EC0B0F /* TabbarRouter.swift */; };
 		FED4CBD62A62D95D00EC0B0F /* Page1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED4CBD52A62D95D00EC0B0F /* Page1View.swift */; };
 		FED4CBD82A62DAC000EC0B0F /* Page1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED4CBD72A62DAC000EC0B0F /* Page1ViewModel.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		FE79AF392A667CE800C63AB9 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
+		FE79AF3B2A6696AE00C63AB9 /* TabbarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarConfigurator.swift; sourceTree = "<group>"; };
 		FED4CBD32A62D93800EC0B0F /* TabbarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarRouter.swift; sourceTree = "<group>"; };
 		FED4CBD52A62D95D00EC0B0F /* Page1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1View.swift; sourceTree = "<group>"; };
 		FED4CBD72A62DAC000EC0B0F /* Page1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewModel.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				FEDF43622A6299C1005A3809 /* TabbarView.swift */,
+				FE79AF3B2A6696AE00C63AB9 /* TabbarConfigurator.swift */,
 				FED4CBD32A62D93800EC0B0F /* TabbarRouter.swift */,
 				FE79AF392A667CE800C63AB9 /* Pages.swift */,
 			);
@@ -228,6 +231,7 @@
 				FED4CBD42A62D93800EC0B0F /* TabbarRouter.swift in Sources */,
 				FED611B62A6438180016AB26 /* ContentView.swift in Sources */,
 				FEDF43632A6299C1005A3809 /* TabbarView.swift in Sources */,
+				FE79AF3C2A6696AE00C63AB9 /* TabbarConfigurator.swift in Sources */,
 				FED611BE2A643CC40016AB26 /* ContentViewConfigurator.swift in Sources */,
 				FED4CBDE2A62DBBB00EC0B0F /* Page2ViewModel.swift in Sources */,
 				FED611BA2A643A390016AB26 /* UIApplication+Ext.swift in Sources */,

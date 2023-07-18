@@ -8,9 +8,9 @@
 import SwiftUI
 
 final class ContentViewRouter {
-    static func destinationTabbar(Event: Event) -> some View {
+    static func destinationTabbar(event: Event) -> some View {
         LazyView(
-            TabbarView(event: Event)
+            TabbarConfigurator.configure(event: event)
         )
     }
 }

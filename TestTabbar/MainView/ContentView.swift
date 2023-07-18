@@ -15,7 +15,7 @@ struct ContentView: View, AppNavigator {
             ScrollView {
                 Button {
                     navigator.presentView(
-                        view: ContentViewRouter.destinationTabbar(Event: viewModel.events.first ?? Event.fakeData(id: "Cant find the event"))
+                        view: ContentViewRouter.destinationTabbar(event: viewModel.events.first ?? Event.fakeData(id: "Cant find the event"))
                     )
                 } label: {
                     Text("Show Tabbar")

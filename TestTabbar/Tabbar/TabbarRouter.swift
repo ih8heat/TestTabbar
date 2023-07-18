@@ -8,9 +8,9 @@
 import SwiftUI
 
 final class TabbarRouter {
-    static func destinationPage1(_ selectedTab: Binding<Pages>, text: Event) -> some View {
+    static func destinationPage1(_ selectedTab: Binding<Pages>, event: Event) -> some View {
         LazyView(
-            Page1Configurator.configure(selectedTab, text)
+            Page1Configurator.configure(selectedTab, event)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background {
                     Color.black.opacity(0.04)
@@ -20,9 +20,9 @@ final class TabbarRouter {
         )
     }
     
-    static func destinationPage2(_ selectedTab: Binding<Pages>, text: Event) -> some View {
+    static func destinationPage2(_ selectedTab: Binding<Pages>, event: Event) -> some View {
         LazyView(
-            Page2Configurator.configure(selectedTab, text)
+            Page2Configurator.configure(selectedTab, event)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background {
                     Color.black.opacity(0.04)
