@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View, AppNavigator {
     @ObservedObject var viewModel: MainViewModel
+    @State private var shouldShowTabbarNatively: Bool = false
     
     var body: some View {
         NavigationView {
@@ -19,6 +20,15 @@ struct ContentView: View, AppNavigator {
                     )
                 } label: {
                     Text("Show Tabbar")
+                }
+                
+                Button {
+                    shouldShowTabbarNatively.toggle()
+                } label: {
+                    Text("Show Tabbar Natively")
+                }
+                .fullScreenCover(isPresented: $shouldShowTabbarNatively) {
+                    ContentViewRouter.destinationTabbar(event: viewModel.events.first ?? Event.fakeData(id: "Cant find the event"))
                 }
             }
             .navigationTitle("Main")
