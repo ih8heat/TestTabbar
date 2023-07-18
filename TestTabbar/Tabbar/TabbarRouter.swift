@@ -8,30 +8,27 @@
 import SwiftUI
 
 final class TabbarRouter {
-    static func destinationPage1(_ selectedTab: Binding<String>, text: String) -> some View {
+    static func destinationPage1(_ selectedTab: Binding<Pages>, text: String) -> some View {
         LazyView(
             Page1Configurator.configure(selectedTab, text)
-                .tabItem {
-                    Image(systemName: "theatermasks")
-                    Text("Page1")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background {
+                    Color.black.opacity(0.04)
+                        .ignoresSafeArea()
                 }
-                .tag(Pages.page1.rawValue)
+                .tag(Pages.page1)
         )
     }
     
-    static func destinationPage2(_ selectedTab: Binding<String>, text: String) -> some View {
+    static func destinationPage2(_ selectedTab: Binding<Pages>, text: String) -> some View {
         LazyView(
             Page2Configurator.configure(selectedTab, text)
-                .tabItem {
-                    Image(systemName: "theatermasks")
-                    Text("Page2")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background {
+                    Color.black.opacity(0.04)
+                        .ignoresSafeArea()
                 }
-                .tag(Pages.page2.rawValue)
+                .tag(Pages.page2)
         )
     }
-}
-
-
-enum Pages: String {
-    case page1 = "Page 1", page2 = "Page 2"
 }

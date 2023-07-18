@@ -10,7 +10,7 @@ import SwiftUI
 struct Page1View: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var viewModel: Page1ViewModel
-    @Binding var selectedTab: String
+    @Binding var selectedTab: Pages
     
     var body: some View {
         NavigationView {
@@ -24,7 +24,9 @@ struct Page1View: View {
                 }
                 
                 Button {
-                    selectedTab = Pages.page2.rawValue
+                    withAnimation(.spring()) {
+                        selectedTab = Pages.page2
+                    }
                 } label: {
                     Text("Go to page 2")
                 }
