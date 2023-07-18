@@ -8,11 +8,11 @@
 import Foundation
 
 final class Page1ViewModel: ObservableObject {
-    @Published var text: String = ""
+    @Published var event: Event
     private var test: Bool = true
     
-    init(text: String) {
-        self.text = text
+    init(event: Event) {
+        self.event = event
         print("page 1 init")
     }
     

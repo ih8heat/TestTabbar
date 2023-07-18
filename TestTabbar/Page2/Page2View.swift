@@ -15,10 +15,10 @@ struct Page2View: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text(viewModel.text)
+                Text(viewModel.event.id)
                 
                 Button {
-                    viewModel.text = "Page 2 changed"
+                    viewModel.event = Event.fakeData(id: "ID chaged page 2")
                 } label: {
                     Text("Tap to change text on page 2")
                 }

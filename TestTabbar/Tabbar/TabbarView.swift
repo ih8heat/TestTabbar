@@ -10,14 +10,14 @@ import SwiftUI
 struct TabbarView: View {
     @State private var selectedTab: Pages
     @Namespace private var animation
-    private let text: String
+    private let event: Event
     
     init(
         selectedTab: Pages = Pages.page1,
-        text: String
+        event: Event
     ) {
         self._selectedTab = State(initialValue: selectedTab)
-        self.text = text
+        self.event = event
         UITabBar.appearance().isHidden = true
     }
     
@@ -25,11 +25,11 @@ struct TabbarView: View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
                 TabView(selection: $selectedTab) {
-                    TabbarRouter.destinationPage1($selectedTab, text: text)
-                    TabbarRouter.destinationPage2($selectedTab, text: text)
+                    TabbarRouter.destinationPage1($selectedTab, text: event)
+                    TabbarRouter.destinationPage2($selectedTab, text: event)
                 }
                 .onAppear {
-                    print(text)
+                    print(event)
                 }
                 
                 CustomTabbar(currentTab: $selectedTab, animation: animation, size: proxy.size, bottomEdge: proxy.safeAreaInsets.bottom)
@@ -163,6 +163,6 @@ struct TabbarButtons: View {
 
 struct TabbarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabbarView(selectedTab: Pages.page1, text: "Hello")
+        TabbarView(selectedTab: Pages.page1, event: Event.fakeData())
     }
 }

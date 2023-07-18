@@ -15,10 +15,10 @@ struct Page1View: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text(viewModel.text)
+                Text(viewModel.event.id)
                 
                 Button {
-                    viewModel.text = "Changed"
+                    viewModel.event = Event.fakeData(id: "ID chaged")
                 } label: {
                     Text("Tap to change")
                 }

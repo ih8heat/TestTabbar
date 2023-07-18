@@ -8,8 +8,8 @@
 import SwiftUI
 
 final class Page2Configurator {
-    public static func configure(_ selectedTab: Binding<Pages>, _ text: String) -> Page2View {
-        let viewModel = Page2ViewModel(text: text)
+    public static func configure(_ selectedTab: Binding<Pages>, _ event: Event) -> Page2View {
+        let viewModel = Page2ViewModel(event: event)
         return Page2View(viewModel: viewModel, selectedTab: selectedTab)
     }
 }
